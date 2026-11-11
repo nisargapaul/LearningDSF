@@ -1,0 +1,180 @@
+{
+  "n": 12,
+  "energy_unit": "J_star=1, fixed; Pauli eigenvalues +/-1; positive 2*pi convention",
+  "theta": [
+    0.4,
+    -0.7,
+    0.2
+  ],
+  "trials": 5000,
+  "temperature": {
+    "moments": 270,
+    "moment_sigma": [
+      0.005,
+      0.01,
+      0.02
+    ],
+    "noise_seed": 20261056,
+    "estimator": "-pinv(M)*(<O^dagger O>-1)/beta; 18 momenta x 15 unit polarizations"
+  },
+  "chain": {
+    "hamiltonians": 1000,
+    "parameter_seed": 20261009,
+    "coupling_range": [
+      -0.6,
+      0.6
+    ],
+    "replicates": 5,
+    "noise_seed": 20261008,
+    "bootstrap_seed": 20261010,
+    "bootstraps": 5000,
+    "solver": "Unbounded LM, analytic Jacobian, true-parameter initialization, tolerances 1e-12, max_nfev 5000",
+    "statistic": "Mean over all Hamiltonians and five noise trials; central 25% bootstrap-mean ribbons"
+  },
+  "parameters": {
+    "counts": [
+      1,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27
+    ],
+    "hamiltonians": 64,
+    "seed": 20261015,
+    "betas": [
+      0.2,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004,
+      0.20000000000000004
+    ],
+    "ht_moments": 27,
+    "sf_moments": 828,
+    "ht_sigma_factor": 0.1805787796286538,
+    "population": "Random nested known supports, omitted coefficients zero, Euclidean norm one",
+    "statistic": "Each Hamiltonian noise median, then median/central 25% across Hamiltonians",
+    "validation": {
+      "size": 32,
+      "seed": 20271015,
+      "noise_seed": 20281015,
+      "candidate_betas": [
+        0.02,
+        0.024230553172571768,
+        0.0293559853524414,
+        0.03556558820077846,
+        0.04308869380063767,
+        0.05,
+        0.05220314431365072,
+        0.0632455532033676,
+        0.07662373699114575,
+        0.09283177667225556,
+        0.11246826503806984,
+        0.13625841381159226,
+        0.16508083705360369,
+        0.20000000000000004,
+        0.24230553172571767,
+        0.2935598535244138,
+        0.3556558820077846,
+        0.43088693800637673,
+        0.5220314431365073,
+        0.632455532033676,
+        0.7662373699114575,
+        0.9283177667225556,
+        1.1246826503806984,
+        1.3625841381159225,
+        1.6508083705360366,
+        2.0
+      ],
+      "selected_betas": [
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004,
+        0.20000000000000004
+      ],
+      "selection_sigma_m": 0.01,
+      "test_metrics_used": false,
+      "p1_beta_predeclared": 0.2,
+      "data_sha256": "94cc295e1f33afd87b6e8d275fb77e583102b4c839a4f3dfb69d4c1d62f32d70"
+    }
+  },
+  "supplement": {
+    "features": [
+      3,
+      15
+    ],
+    "moment_sigma": 0.05,
+    "fixed_beta": 0.05,
+    "noise_seed": 20261008
+  },
+  "sf": "Saved SF references for the six-panel figure; SF calculations are separate.",
+  "figure": {
+    "rc": {"font.family": "serif", "mathtext.fontset": "stix", "font.size": 8, "axes.labelsize": 8.5, "axes.titlesize": 9, "xtick.labelsize": 8, "ytick.labelsize": 8, "axes.labelcolor": "black", "xtick.color": "black", "ytick.color": "black", "text.color": "black", "axes.edgecolor": "#23252F", "axes.linewidth": 0.65, "legend.fontsize": 7.5, "legend.frameon": false, "pdf.fonttype": 42, "figure.facecolor": "white", "savefig.facecolor": "white", "lines.linewidth": 1.25, "savefig.dpi": 300, "axes.spines.top": false, "axes.spines.right": false, "axes.axisbelow": true, "axes.labelpad": 3, "xtick.direction": "out", "ytick.direction": "out", "xtick.major.size": 3, "ytick.major.size": 3, "xtick.major.pad": 2, "ytick.major.pad": 2, "xtick.minor.size": 1.7, "ytick.minor.size": 1.7, "font.serif": ["Times New Roman", "STIXGeneral"], "font.sans-serif": ["Avenir", "DejaVu Sans"]},
+    "colors": {"ht": ["#DC9B26", "#D64B28", "#9C3764"], "sf": ["#79B7D0", "#378BC0", "#35558F"]},
+    "access_colors": {"ht": ["#C63D36", "#E68132"], "sf": ["#287BAA", "#579AA2"]},
+    "panels": [
+      {
+        "position": [0.08, 0.62, 0.196, 0.28],
+        "axes": {"xscale": "log", "yscale": "log", "ylabel": "relative error", "xlabel": "$T/J_\\star$", "xlim": [3, 60], "ylim": [0.005, 0.2], "xticks": [3, 10, 30], "xticklabels": ["3", "10", "30"], "yticks": [0.01, 0.1]},
+        "title": "High-temperature protocol",
+        "x": "temperatures",
+        "guide": "$T^{-1}$",
+        "legend": {"loc": "center left", "bbox_to_anchor": [1.035, 0.5], "fontsize": 6.8, "handlelength": 1.1, "handletextpad": 0.45, "labelspacing": 0.25, "borderpad": 0, "borderaxespad": 0}
+      },
+      {
+        "position": [0.427, 0.62, 0.235, 0.28],
+        "axes": {"xscale": "log", "yscale": "log", "ylabel": "relative error", "xlabel": "coefficient noise $\\sigma$", "xlim": [0.0001, 0.1], "ylim": [0.0001, 0.2], "xticks": [0.0001, 0.001, 0.01, 0.1]},
+        "title": "HT inversion stability",
+        "x": "coefficient_sigmas",
+        "guide": "",
+        "legend": {"loc": "lower right", "fontsize": 6.8, "handlelength": 1.6, "labelspacing": 0.3, "borderaxespad": 0.4}
+      },
+      {
+        "position": [0.756, 0.62, 0.229, 0.28],
+        "axes": {"xscale": "linear", "yscale": "log", "ylabel": "relative error", "xlabel": "$p$ = # parameters", "xlim": [1, 27], "xticks": [1, 6, 12, 18, 27], "ylim": [0.01, 0.125], "yticks": [0.01, 0.1], "yticklabels": ["$10^{-2}$", "$10^{-1}$"]},
+        "title": "HT parameter scaling",
+        "x": "counts",
+        "guide": "",
+        "legend": {"loc": "lower right", "fontsize": 6.6, "handlelength": 1.2, "labelspacing": 0.1, "borderaxespad": 0.15, "borderpad": 0.08}
+      },
+      {
+        "position": [0.08, 0.15, 0.196, 0.28],
+        "axes": {"xscale": "log", "yscale": "log", "ylabel": "relative error", "xlabel": "$B/J_\\star$", "xlim": [2, 100], "ylim": [0.001, 0.2], "xticks": [2, 8, 32, 100], "xticklabels": ["2", "8", "32", "100"], "yticks": [0.001, 0.01, 0.1]},
+        "title": "Strong-field protocol",
+        "x": "fields",
+        "guide": "$B^{-1}$",
+        "legend": {"loc": "center left", "bbox_to_anchor": [1.035, 0.5], "fontsize": 6.8, "handlelength": 1.1, "handletextpad": 0.45, "labelspacing": 0.25, "borderpad": 0, "borderaxespad": 0}
+      },
+      {
+        "position": [0.427, 0.15, 0.235, 0.28],
+        "axes": {"xscale": "log", "yscale": "log", "ylabel": "relative error", "xlabel": "coefficient noise $\\sigma$", "xlim": [0.0001, 0.1], "ylim": [1e-05, 0.2], "xticks": [0.0001, 0.001, 0.01, 0.1]},
+        "title": "SF inversion stability",
+        "x": "coefficient_sigmas",
+        "guide": "",
+        "legend": {"loc": "upper left", "fontsize": 6.8, "handlelength": 1.6, "labelspacing": 0.3, "borderaxespad": 0.4}
+      },
+      {
+        "position": [0.756, 0.15, 0.229, 0.28],
+        "axes": {"xscale": "linear", "yscale": "log", "ylabel": "relative error", "xlabel": "$p$ = # parameters", "xlim": [1, 27], "xticks": [1, 6, 12, 18, 27], "ylim": [0.006, 0.04], "yticks": [0.01, 0.02, 0.03], "yticklabels": ["$10^{-2}$", "$2\\times10^{-2}$", "$3\\times10^{-2}$"]},
+        "title": "SF parameter scaling",
+        "x": "counts",
+        "guide": "",
+        "legend": {"loc": "lower right", "fontsize": 6.6, "handlelength": 1.2, "labelspacing": 0.1, "borderaxespad": 0.15, "borderpad": 0.08}
+      }
+    ]
+  }
+}

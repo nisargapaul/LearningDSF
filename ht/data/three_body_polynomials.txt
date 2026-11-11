@@ -1,0 +1,123 @@
+Parameter order: x, xx, yy, yz, zy, zz, xxx, xyy, xyz, xzy, xzz, yxy, yxz, yyx, yzx, zxy, zxz, zyx, zzx
+All features divided by 2pi.
+
+Full feature 1: ("x", "x", 0, -1, 1):real
+-parameters[2]
+
+Full feature 2: ("x", "x", 1, -2, 1):real
+4*parameters[13]*parameters[16] - 4*parameters[12]*parameters[17]
+
+Full feature 3: ("x", "x", 1, -1, 1):real
+4*parameters[15]*parameters[18] - 4*parameters[14]*parameters[19] + 4*parameters[9]*parameters[10] - 4*parameters[8]*parameters[11] + 4*parameters[4]*parameters[5] - 4*parameters[3]*parameters[6]
+
+Full feature 4: ("x", "x", 1, 0, 1):real
+4*parameters[19]^2 + 4*parameters[18]^2 + 4*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 4*parameters[14]^2 + 4*parameters[13]^2 + 4*parameters[12]^2 + 4*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 4*parameters[8]^2 + 4*parameters[6]^2 + 4*parameters[5]^2 + 4*parameters[4]^2 + 4*parameters[3]^2
+
+Full feature 5: ("y", "y", 0, -1, 1):real
+-parameters[3]
+
+Full feature 6: ("y", "y", 1, -2, 1):real
+4*parameters[11]*parameters[19] + 4*parameters[9]*parameters[18] - 4*parameters[7]*parameters[17]
+
+Full feature 7: ("y", "y", 1, -1, 1):real
+4*parameters[17]*parameters[19] + 4*parameters[13]*parameters[15] + 4*parameters[11]*parameters[17] + 4*parameters[10]*parameters[16] - 4*parameters[7]*parameters[19] - 4*parameters[7]*parameters[11] - 4*parameters[2]*parameters[6]
+
+Full feature 8: ("y", "y", 1, 0, 1):real
+6*parameters[19]^2 + 4*parameters[18]^2 + 6*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 2*parameters[14]^2 + 4*parameters[13]^2 + 2*parameters[12]^2 + 6*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 2*parameters[8]^2 + 6*parameters[7]^2 + 4*parameters[6]^2 + 2*parameters[5]^2 + 2*parameters[4]^2 + 4*parameters[2]^2 + 2*parameters[1]^2
+
+Full feature 9: ("y", "z", 0, -1, 1):real
+-parameters[5]
+
+Full feature 10: ("y", "z", 0, 0, 1):imag
+-parameters[1]
+
+Full feature 11: ("y", "z", 0, 1, 1):real
+-parameters[4]
+
+Full feature 12: ("y", "z", 1, -2, 1):real
+-4*parameters[11]*parameters[15] - 4*parameters[9]*parameters[14] + 4*parameters[7]*parameters[13]
+
+Full feature 13: ("y", "z", 1, -1, 1):real
+-4*parameters[17]*parameters[18] - 4*parameters[13]*parameters[14] - 4*parameters[11]*parameters[13] - 4*parameters[10]*parameters[12] + 4*parameters[7]*parameters[15] + 4*parameters[7]*parameters[9] + 4*parameters[2]*parameters[4]
+
+Full feature 14: ("y", "z", 1, 0, 1):real
+-2*parameters[18]*parameters[19] - 2*parameters[16]*parameters[17] - 2*parameters[15]*parameters[19] - 2*parameters[14]*parameters[18] - 2*parameters[14]*parameters[15] - 2*parameters[13]*parameters[17] - 2*parameters[12]*parameters[16] - 2*parameters[12]*parameters[13] - 2*parameters[10]*parameters[11] - 2*parameters[9]*parameters[11] - 2*parameters[8]*parameters[10] - 2*parameters[8]*parameters[9] - 2*parameters[5]*parameters[6] - 2*parameters[4]*parameters[6] - 2*parameters[3]*parameters[5] - 2*parameters[3]*parameters[4]
+
+Full feature 15: ("y", "z", 1, 0, 1):imag
+2*parameters[6]*parameters[19] + 2*parameters[6]*parameters[11] + 2*parameters[5]*parameters[18] + 2*parameters[5]*parameters[10] + 2*parameters[4]*parameters[15] + 2*parameters[4]*parameters[9] + 2*parameters[3]*parameters[14] + 2*parameters[3]*parameters[8] + 4*parameters[2]*parameters[7] + 4*parameters[1]*parameters[2]
+
+Full feature 16: ("y", "z", 1, 1, 1):real
+-4*parameters[16]*parameters[19] - 4*parameters[12]*parameters[15] - 4*parameters[9]*parameters[17] - 4*parameters[8]*parameters[16] + 4*parameters[7]*parameters[18] + 4*parameters[7]*parameters[10] + 4*parameters[2]*parameters[5]
+
+Full feature 17: ("y", "z", 1, 2, 1):real
+-4*parameters[10]*parameters[19] - 4*parameters[8]*parameters[18] + 4*parameters[7]*parameters[16]
+
+Full feature 18: ("z", "z", 0, -1, 1):real
+-parameters[6]
+
+Full feature 19: ("z", "z", 1, -2, 1):real
+4*parameters[10]*parameters[15] + 4*parameters[8]*parameters[14] - 4*parameters[7]*parameters[12]
+
+Full feature 20: ("z", "z", 1, -1, 1):real
+4*parameters[16]*parameters[18] + 4*parameters[12]*parameters[14] + 4*parameters[9]*parameters[13] + 4*parameters[8]*parameters[12] - 4*parameters[7]*parameters[14] - 4*parameters[7]*parameters[8] - 4*parameters[2]*parameters[3]
+
+Full feature 21: ("z", "z", 1, 0, 1):real
+2*parameters[19]^2 + 4*parameters[18]^2 + 2*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 6*parameters[14]^2 + 4*parameters[13]^2 + 6*parameters[12]^2 + 2*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 6*parameters[8]^2 + 6*parameters[7]^2 + 2*parameters[5]^2 + 2*parameters[4]^2 + 4*parameters[3]^2 + 4*parameters[2]^2 + 2*parameters[1]^2
+
+Selected feature 1: -Re m[0,1,1;xx]
+parameters[2]
+
+Selected feature 2: -Re m[0,1,1;yy]
+parameters[3]
+
+Selected feature 3: -Re m[0,1,1;zy]
+parameters[5]
+
+Selected feature 4: -Re m[0,1,1;yz]
+parameters[4]
+
+Selected feature 5: -Re m[0,1,1;zz]
+parameters[6]
+
+Selected feature 6: Re m[1,2,1;xx]
+4*parameters[13]*parameters[16] - 4*parameters[12]*parameters[17]
+
+Selected feature 7: Re m[1,1,1;xx]
+4*parameters[15]*parameters[18] - 4*parameters[14]*parameters[19] + 4*parameters[9]*parameters[10] - 4*parameters[8]*parameters[11] + 4*parameters[4]*parameters[5] - 4*parameters[3]*parameters[6]
+
+Selected feature 8: Re m[1,0,1;xx]
+4*parameters[19]^2 + 4*parameters[18]^2 + 4*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 4*parameters[14]^2 + 4*parameters[13]^2 + 4*parameters[12]^2 + 4*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 4*parameters[8]^2 + 4*parameters[6]^2 + 4*parameters[5]^2 + 4*parameters[4]^2 + 4*parameters[3]^2
+
+Selected feature 9: Re m[1,2,1;yy]
+4*parameters[11]*parameters[19] + 4*parameters[9]*parameters[18] - 4*parameters[7]*parameters[17]
+
+Selected feature 10: Re m[1,1,1;yy]
+4*parameters[17]*parameters[19] + 4*parameters[13]*parameters[15] + 4*parameters[11]*parameters[17] + 4*parameters[10]*parameters[16] - 4*parameters[7]*parameters[19] - 4*parameters[7]*parameters[11] - 4*parameters[2]*parameters[6]
+
+Selected feature 11: Re m[1,0,1;yy]
+6*parameters[19]^2 + 4*parameters[18]^2 + 6*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 2*parameters[14]^2 + 4*parameters[13]^2 + 2*parameters[12]^2 + 6*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 2*parameters[8]^2 + 6*parameters[7]^2 + 4*parameters[6]^2 + 2*parameters[5]^2 + 2*parameters[4]^2 + 4*parameters[2]^2 + 2*parameters[1]^2
+
+Selected feature 12: Re m[1,2,1;zy]
+-4*parameters[11]*parameters[15] - 4*parameters[9]*parameters[14] + 4*parameters[7]*parameters[13]
+
+Selected feature 13: Re m[1,1,1;zy]
+-4*parameters[17]*parameters[18] - 4*parameters[13]*parameters[14] - 4*parameters[11]*parameters[13] - 4*parameters[10]*parameters[12] + 4*parameters[7]*parameters[15] + 4*parameters[7]*parameters[9] + 4*parameters[2]*parameters[4]
+
+Selected feature 14: Re m[1,0,1;yz] + Im m[1,0,1;yz]
+-2*parameters[18]*parameters[19] - 2*parameters[16]*parameters[17] - 2*parameters[15]*parameters[19] - 2*parameters[14]*parameters[18] - 2*parameters[14]*parameters[15] - 2*parameters[13]*parameters[17] - 2*parameters[12]*parameters[16] - 2*parameters[12]*parameters[13] - 2*parameters[10]*parameters[11] - 2*parameters[9]*parameters[11] - 2*parameters[8]*parameters[10] - 2*parameters[8]*parameters[9] + 2*parameters[6]*parameters[19] + 2*parameters[6]*parameters[11] + 2*parameters[5]*parameters[18] + 2*parameters[5]*parameters[10] - 2*parameters[5]*parameters[6] + 2*parameters[4]*parameters[15] + 2*parameters[4]*parameters[9] - 2*parameters[4]*parameters[6] + 2*parameters[3]*parameters[14] + 2*parameters[3]*parameters[8] - 2*parameters[3]*parameters[5] - 2*parameters[3]*parameters[4] + 4*parameters[2]*parameters[7] + 4*parameters[1]*parameters[2]
+
+Selected feature 15: Re m[1,1,1;yz]
+-4*parameters[16]*parameters[19] - 4*parameters[12]*parameters[15] - 4*parameters[9]*parameters[17] - 4*parameters[8]*parameters[16] + 4*parameters[7]*parameters[18] + 4*parameters[7]*parameters[10] + 4*parameters[2]*parameters[5]
+
+Selected feature 16: Re m[1,2,1;yz]
+-4*parameters[10]*parameters[19] - 4*parameters[8]*parameters[18] + 4*parameters[7]*parameters[16]
+
+Selected feature 17: Re m[1,2,1;zz]
+4*parameters[10]*parameters[15] + 4*parameters[8]*parameters[14] - 4*parameters[7]*parameters[12]
+
+Selected feature 18: Re m[1,1,1;zz]
+4*parameters[16]*parameters[18] + 4*parameters[12]*parameters[14] + 4*parameters[9]*parameters[13] + 4*parameters[8]*parameters[12] - 4*parameters[7]*parameters[14] - 4*parameters[7]*parameters[8] - 4*parameters[2]*parameters[3]
+
+Selected feature 19: Re m[1,0,1;zz]
+2*parameters[19]^2 + 4*parameters[18]^2 + 2*parameters[17]^2 + 4*parameters[16]^2 + 4*parameters[15]^2 + 6*parameters[14]^2 + 4*parameters[13]^2 + 6*parameters[12]^2 + 2*parameters[11]^2 + 4*parameters[10]^2 + 4*parameters[9]^2 + 6*parameters[8]^2 + 6*parameters[7]^2 + 2*parameters[5]^2 + 2*parameters[4]^2 + 4*parameters[3]^2 + 4*parameters[2]^2 + 2*parameters[1]^2
+

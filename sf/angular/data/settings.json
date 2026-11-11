@@ -1,0 +1,497 @@
+{
+  "field": 32.0,
+  "n_sites": 12,
+  "displayed_temperature_over_B": 0.1,
+  "temperature_over_B": [
+    0.0,
+    0.05,
+    0.056841714892779935,
+    0.06461961103904158,
+    0.07346179014327074,
+    0.0835138826167405,
+    0.09494144610579709,
+    0.1,
+    0.10793269222107899,
+    0.12270158637681475,
+    0.1394913717944543,
+    0.1585785757108627,
+    0.18027756377319948,
+    0.2,
+    0.20494571763122313,
+    0.2329893210018033,
+    0.2648702511489377,
+    0.30111358598773874,
+    0.34231625210115235,
+    0.3891568561019736,
+    0.4,
+    0.4424068612623793,
+    0.5029432934897163,
+    0.5717631859155637,
+    0.6,
+    0.65
+  ],
+  "grids": {
+    "coarse": [
+      12,
+      24
+    ],
+    "fine": [
+      16,
+      32
+    ]
+  },
+  "families": [
+    "square",
+    "honeycomb"
+  ],
+  "orders": [
+    2,
+    3,
+    4
+  ],
+  "main_normalization": "Multiply each whole Hamiltonian to equal sum of nonconstant harmonic amplitudes; keep the two-body scale fixed.",
+  "thermal_normalization": "Original nonzero Pauli coefficients have magnitude 1; no Hamiltonian rescaling.",
+  "source_files": {
+    "ideal.npz": {
+      "path": "main_figures/angular_data.npz",
+      "sha256": "6afe7753690128f041b49f13c92fcf1896739972818e9ba6952591d33f94db75"
+    },
+    "thermal.npz": {
+      "path": "angular_thermal/lattice_results.npz",
+      "sha256": "676db6947a3594088b1f2173e41c1dbef2a1d0048d86bc362928ba7d74850fea"
+    }
+  },
+  "validation": {
+    "ideal": {
+      "passed": true,
+      "quadrature": 512,
+      "refined_quadrature": 2048,
+      "models": [
+        {
+          "body_order": 2,
+          "mean": -0.6666666666666667,
+          "forbidden": 5.432398595040796e-16,
+          "quadrature_difference": 1.6209256159527285e-14,
+          "closed_form_difference": 1.1102230246251565e-16
+        },
+        {
+          "body_order": 3,
+          "mean": -0.6666666666666667,
+          "forbidden": 6.219492561359177e-16,
+          "quadrature_difference": 6.627510699160842e-15,
+          "closed_form_difference": 2.220446049250313e-16
+        },
+        {
+          "body_order": 4,
+          "mean": -1.0666666666666667,
+          "forbidden": 5.781445024319696e-16,
+          "quadrature_difference": 9.503725665778998e-15,
+          "closed_form_difference": 6.106226635438361e-16
+        }
+      ],
+      "local_errors": {
+        "2": 5.551115123125783e-16,
+        "3": 8.881784197001252e-16,
+        "4": 1.3322676295501878e-15
+      },
+      "full_projection": {
+        "sites": 18,
+        "hilbert_dimension": 262144,
+        "directions": 8,
+        "terms_applied": 135,
+        "maximum_errors": {
+          "2": 1.9953295870640987e-12,
+          "3": 2.0365162618001286e-12,
+          "4": 2.0201627793909196e-12
+        }
+      },
+      "graph_sizes_checked": [
+        3,
+        4,
+        8
+      ],
+      "leading_limit": true,
+      "temperature": 0,
+      "signature": {
+        "settings": {},
+        "sources": {
+          "angular_tomography_codex_handoff/experiments/honeycomb_kitaev/lattice_model.py": "3e67c6aefbd8d25fdac23e54a7abe99d1738e468a4db498646a8d3aa0c2af0de",
+          "angular_tomography_codex_handoff/model.py": "f3939bcc71f67a08642b029cb89321043b8237785d15aaf1a955946b4e400f36"
+        }
+      }
+    },
+    "thermal": {
+      "square": {
+        "coarse": {
+          "minimum_gap": 51.06110110683977,
+          "minimum_ground_polarization": 0.9912591906994911,
+          "maximum_residual": 1.8262211028793774e-12,
+          "total_cpu_seconds": 565.3888500276953
+        },
+        "fine": {
+          "minimum_gap": 50.17408248874739,
+          "minimum_ground_polarization": 0.9910889322898702,
+          "maximum_residual": 1.5304157531546972e-12,
+          "total_cpu_seconds": 999.8831346277148
+        },
+        "maximum_quadrature_difference": 6.783093363227355e-05
+      },
+      "honeycomb": {
+        "coarse": {
+          "minimum_gap": 54.4203081184848,
+          "minimum_ground_polarization": 0.9976587934510661,
+          "maximum_residual": 1.4847447994652448e-12,
+          "total_cpu_seconds": 1990.605798881501
+        },
+        "fine": {
+          "minimum_gap": 54.52221610329133,
+          "minimum_ground_polarization": 0.9976547310062602,
+          "maximum_residual": 1.9503054000519793e-12,
+          "total_cpu_seconds": 3533.05579845421
+        },
+        "maximum_quadrature_difference": 1.7440517668068645e-05
+      },
+      "passed": true,
+      "complete_thermal_states": 4096
+    }
+  },
+  "layout": [
+    [
+      "angular_tomography_panel",
+      0,
+      0,
+      3.6,
+      4.36
+    ],
+    [
+      "square_compass_header_K2",
+      3.635,
+      0.015,
+      1.28,
+      0.29
+    ],
+    [
+      "square_compass_individual_sphere_K2",
+      3.635,
+      0.34,
+      1.28,
+      1.28
+    ],
+    [
+      "square_compass_histogram_K2",
+      4.955,
+      0.24,
+      1.04,
+      1.1
+    ],
+    [
+      "square_compass_individual_scale_K2",
+      3.6449999999999996,
+      1.665,
+      1.26,
+      0.54
+    ],
+    [
+      "square_compass_perspective_K2",
+      4.955,
+      1.4,
+      1.04,
+      0.65
+    ],
+    [
+      "square_compass_header_K3",
+      6.015,
+      0.015,
+      1.28,
+      0.29
+    ],
+    [
+      "square_compass_individual_sphere_K3",
+      6.015,
+      0.34,
+      1.28,
+      1.28
+    ],
+    [
+      "square_compass_histogram_K3",
+      7.335,
+      0.24,
+      1.04,
+      1.1
+    ],
+    [
+      "square_compass_individual_scale_K3",
+      6.0249999999999995,
+      1.665,
+      1.26,
+      0.54
+    ],
+    [
+      "square_compass_perspective_K3",
+      7.335,
+      1.4,
+      1.04,
+      0.65
+    ],
+    [
+      "square_compass_header_K4",
+      8.395,
+      0.015,
+      1.28,
+      0.29
+    ],
+    [
+      "square_compass_individual_sphere_K4",
+      8.395,
+      0.34,
+      1.28,
+      1.28
+    ],
+    [
+      "square_compass_histogram_K4",
+      9.715,
+      0.24,
+      1.04,
+      1.1
+    ],
+    [
+      "square_compass_individual_scale_K4",
+      8.405,
+      1.665,
+      1.26,
+      0.54
+    ],
+    [
+      "square_compass_perspective_K4",
+      9.715,
+      1.4,
+      1.04,
+      0.65
+    ],
+    [
+      "honeycomb_kitaev_header_K2",
+      3.635,
+      2.435,
+      1.28,
+      0.29
+    ],
+    [
+      "honeycomb_kitaev_individual_sphere_K2",
+      3.635,
+      2.76,
+      1.28,
+      1.28
+    ],
+    [
+      "honeycomb_kitaev_histogram_K2",
+      4.955,
+      2.66,
+      1.04,
+      1.1
+    ],
+    [
+      "honeycomb_kitaev_individual_scale_K2",
+      3.6449999999999996,
+      4.085,
+      1.26,
+      0.54
+    ],
+    [
+      "honeycomb_kitaev_perspective_K2",
+      4.955,
+      3.82,
+      1.04,
+      0.65
+    ],
+    [
+      "honeycomb_kitaev_header_K3",
+      6.015,
+      2.435,
+      1.28,
+      0.29
+    ],
+    [
+      "honeycomb_kitaev_individual_sphere_K3",
+      6.015,
+      2.76,
+      1.28,
+      1.28
+    ],
+    [
+      "honeycomb_kitaev_histogram_K3",
+      7.335,
+      2.66,
+      1.04,
+      1.1
+    ],
+    [
+      "honeycomb_kitaev_individual_scale_K3",
+      6.0249999999999995,
+      4.085,
+      1.26,
+      0.54
+    ],
+    [
+      "honeycomb_kitaev_perspective_K3",
+      7.335,
+      3.82,
+      1.04,
+      0.65
+    ],
+    [
+      "honeycomb_kitaev_header_K4",
+      8.395,
+      2.435,
+      1.28,
+      0.29
+    ],
+    [
+      "honeycomb_kitaev_individual_sphere_K4",
+      8.395,
+      2.76,
+      1.28,
+      1.28
+    ],
+    [
+      "honeycomb_kitaev_histogram_K4",
+      9.715,
+      2.66,
+      1.04,
+      1.1
+    ],
+    [
+      "honeycomb_kitaev_individual_scale_K4",
+      8.405,
+      4.085,
+      1.26,
+      0.54
+    ],
+    [
+      "honeycomb_kitaev_perspective_K4",
+      9.715,
+      3.82,
+      1.04,
+      0.65
+    ],
+    [
+      "operator_legend",
+      4.4,
+      4.7,
+      5.6,
+      0.34
+    ]
+  ],
+  "artwork_pages": {
+    "angular_tomography_panel": 0,
+    "square_compass_header_K2": 1,
+    "square_compass_individual_sphere_K2": 2,
+    "square_compass_perspective_K2": 3,
+    "square_compass_header_K3": 4,
+    "square_compass_individual_sphere_K3": 5,
+    "square_compass_perspective_K3": 6,
+    "square_compass_header_K4": 7,
+    "square_compass_individual_sphere_K4": 8,
+    "square_compass_perspective_K4": 9,
+    "honeycomb_kitaev_header_K2": 10,
+    "honeycomb_kitaev_individual_sphere_K2": 11,
+    "honeycomb_kitaev_perspective_K2": 12,
+    "honeycomb_kitaev_header_K3": 13,
+    "honeycomb_kitaev_individual_sphere_K3": 14,
+    "honeycomb_kitaev_perspective_K3": 15,
+    "honeycomb_kitaev_header_K4": 16,
+    "honeycomb_kitaev_individual_sphere_K4": 17,
+    "honeycomb_kitaev_perspective_K4": 18,
+    "operator_legend": 19
+  },
+  "size_inches": [
+    10.8,
+    5.08
+  ],
+  "artwork_sha256": "470a0209891954e274d49a26aab492afd3844a687202977913dd1276dae7d786",
+  "artwork_sources": {
+    "components": {
+      "angular_tomography_panel": {
+        "source": "angular_thermal/.render_parts/angular_tomography_panel.pdf",
+        "sha256": "4ef3f621da026d4f96e91d4d7a870e9e0e1f718e60f407afc4116ebe1b5d7103"
+      },
+      "square_compass_header_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_header_K2.pdf",
+        "sha256": "40fb05926cfb242edf917ede7e85e5a869fe95624ed87833adda094ce51debe3"
+      },
+      "square_compass_individual_sphere_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_individual_sphere_K2.pdf",
+        "sha256": "8ac548b39db982238f986c65ff226ef34f7080e9be5e384c2ac3563b4c99ec33"
+      },
+      "square_compass_perspective_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_perspective_K2.pdf",
+        "sha256": "7fd432d4f08cd224b76761a176f4b372a797671e42a0d08895b39cd44cb441b1"
+      },
+      "square_compass_header_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_header_K3.pdf",
+        "sha256": "29cf47ccf7db6ce3e869468f292c3a0c61c094a5c4983c2d61e11a63bb8b7bf9"
+      },
+      "square_compass_individual_sphere_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_individual_sphere_K3.pdf",
+        "sha256": "a4d847e0901847f5dd16e5bbcdf484965b48807b9dfd51670d9b66a4fb474266"
+      },
+      "square_compass_perspective_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_perspective_K3.pdf",
+        "sha256": "65a4bba95ce107866269cd9874a0cf54c831d0d63eaf48ebfe82977d59006b73"
+      },
+      "square_compass_header_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_header_K4.pdf",
+        "sha256": "90d0e942ec4a8f246f594800733ec6986840d8ecd1339509aeeb5fc1dbada3d8"
+      },
+      "square_compass_individual_sphere_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_individual_sphere_K4.pdf",
+        "sha256": "ebf4926f90fd003c95ddd6bf627af849fa5fee9e9ed0ae7c26150152387a7c5c"
+      },
+      "square_compass_perspective_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/square_compass_perspective_K4.pdf",
+        "sha256": "3efdd33ec23deb3ba19ab34ec5591ccd7036c416d72bcf7206d8a6f304f24b0b"
+      },
+      "honeycomb_kitaev_header_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_header_K2.pdf",
+        "sha256": "2074601b21e3ed584122eace552b50597438c32dab607ace2ae10308ae73dd52"
+      },
+      "honeycomb_kitaev_individual_sphere_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_individual_sphere_K2.pdf",
+        "sha256": "180dddfb225238f366a26cb97d7e64665e29e50c46f7cdff78bff2347bd41f66"
+      },
+      "honeycomb_kitaev_perspective_K2": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_perspective_K2.pdf",
+        "sha256": "435582a2d34abe75fceecbc30dd167d6045484dbb7e3dc9c94bcb966e3517bc8"
+      },
+      "honeycomb_kitaev_header_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_header_K3.pdf",
+        "sha256": "04d01b12da601ac08b9ad4fcf6efd0821fa2118ce4509e0f8eaa518ea597487f"
+      },
+      "honeycomb_kitaev_individual_sphere_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_individual_sphere_K3.pdf",
+        "sha256": "c56a830c288e41d25d1380cd4a81d0846602ef42613d60c1bc797d8393cb4295"
+      },
+      "honeycomb_kitaev_perspective_K3": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_perspective_K3.pdf",
+        "sha256": "b3067ac63da3c40a1f9f80323f03c0da0e64fcddc17de01a710dc4e299faa6e1"
+      },
+      "honeycomb_kitaev_header_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_header_K4.pdf",
+        "sha256": "36461d039bfe8c849f9f7e862b04d3087f0bcab20166c0990a1aa6e8a94d9afd"
+      },
+      "honeycomb_kitaev_individual_sphere_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_individual_sphere_K4.pdf",
+        "sha256": "41a32eff81f5300abbfded95d7b6a4e0bd3d095653a45dbb050735a656db3f7a"
+      },
+      "honeycomb_kitaev_perspective_K4": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/honeycomb_kitaev_perspective_K4.pdf",
+        "sha256": "b78466805c23934cb04c1b92cb3a1dac7891a3efd796dad8e72bb95940350c91"
+      },
+      "operator_legend": {
+        "source": "angular_tomography_codex_handoff/experiments/angular_tomography_large_text/components/operator_legend.pdf",
+        "sha256": "fc1610ecaee6ec58cc263e0c68378cb587e1ac6626a1e5e7924b8df0f0d48748"
+      }
+    },
+    "sphere_images": "Removed numerical images; vector sphere outlines retained.",
+    "schematic": "Includes original illustrative finite-B,T correction annotations; not empirical data."
+  }
+}

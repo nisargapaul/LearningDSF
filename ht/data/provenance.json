@@ -1,0 +1,27 @@
+{
+  "files_sha256": {
+    "results.npz": "3bb39f30c3f10653a7d17b1e087dc84553c6c60f06adfd3b8ce81a591ea77b19",
+    "plotted.csv": "39f3f235a697d02682b3dc1347c357cd8fe903b48461a9325b38f42ed54678f6",
+    "settings.json": "9efe3b33ee3c8e7cc955b36f7a3f2fde582677386398ff51ef2018a2049cd646",
+    "three_body.toml": "8e852f773a03c993fa6f53861333c11da58d8b9b2d732d5fb3bc892aea3deb54",
+    "three_body_roots.csv": "2a1390dd33c0dcc00e3b3f8a719e7f2e9b4691acad6ae4a2650bd51000453846",
+    "three_body_polynomials.txt": "23ad2d31f25d884eb5f368501d7a598d39245da51ea03a2f063a342936e6c33c"
+  },
+  "source_data_sha256": {
+    "main_figures/ht_sf_noise_figure.npz": "3ea10961f3b6abdcacb8d3e08a561dd1942259edd5f52cd2071fe5e6901655f8",
+    "main_figures/ht_sf_five_panel.npz": "3afa7fa0fc3f4c673ad648cc3a8b3dc5a96de9b529e1e26290800f3b9309cb01",
+    "ht_spin_access/ensemble_results.npz": "4554a72ba0900a6a001c8305079863f210261836f559351e6cf2aadbeac5687b",
+    "ht_honeycomb/feature_sets_results.npz": "a4ff42945e15e1bd0e83e0d336ab5ed755bc35d8cdcfee4fbdace0778c73d8c8"
+  },
+  "reference_figure_sha256": {
+    "png": "e87e89663ebd1d9ae535e5871246b8b2d7e028bf6290eda1abeabeb99f031fa8",
+    "pdf": "58556f19ad430c1e665385d4e581bcd2e91a186e20f1aa94daabbbc287647480"
+  },
+  "array_groups": {
+    "temperature": "270 DSF moments, temperature sweep and noise trials",
+    "chain": "One-/two-body chain, exact feature coefficients and local fits",
+    "parameters": "Known-support honeycomb ensembles and moment-noise summaries",
+    "supplement": "Three- and fifteen-feature bond-correlation comparison",
+    "figure": "Six-panel figure values, including saved SF references"
+  }
+}

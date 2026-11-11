@@ -1,0 +1,20 @@
+# Build products and local runs
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+lean/.lake/
+runs/inr/
+*.tmp
+*.last.pt
+
+# Keep the compact reference data
+!inr/data/*.npz
+!inr/data/*.npy
+
+runs/ht/
+!ht/data/*.npz
+
+runs/sf/
+!sf/data/*.npz

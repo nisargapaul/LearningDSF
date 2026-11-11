@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use LearningDSF, please cite the software below."
+title: LearningDSF
+type: software
+authors:
+  - family-names: Paul
+    given-names: Nisarga
+  - family-names: Schuster
+    given-names: Thomas
+  - family-names: Alicea
+    given-names: Jason
+repository-code: https://github.com/nisargapaul/LearningDSF
+abstract: "Research software accompanying Learning Quantum Hamiltonians from the Dynamical Structure Factor."

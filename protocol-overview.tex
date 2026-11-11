@@ -1,0 +1,67 @@
+% Build the SVG with:
+% pdflatex -interaction=nonstopmode -halt-on-error protocol-overview.tex
+% pdftocairo -svg protocol-overview.pdf protocol-overview.svg
+\documentclass[11pt,border=4pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\renewcommand{\vec}{\boldsymbol}
+\setlength{\textwidth}{466pt}
+\pagecolor{white}
+
+\definecolor{dsfHT}{HTML}{E07B29}\definecolor{dsfSF}{HTML}{2E5FA3}\definecolor{dsfFD}{HTML}{7B52A8}
+\def\bd{\boldsymbol d}\def\bq{\boldsymbol q}\def\br{\boldsymbol r}\def\bl{\boldsymbol\lambda}\def\sm{\mathsf m}
+\def\dsfF{\fontsize{7}{8.3}\selectfont}
+\long\def\dsfc#1{\begin{minipage}{143pt}\dsfF\raggedright\hyphenpenalty10000\exhyphenpenalty10000
+  \lineskiplimit-.6pt\lineskip.4pt\relax#1\end{minipage}}
+\long\def\dsfh#1#2{\setbox0\hbox{\dsfc{#1}}\edef#2{\the\dimexpr\ht0+\dp0}}
+\def\dsfe#1{\par\vspace{1pt}\centerline{$#1$}\par\vspace{1pt}}
+\def\dsfi#1{\par\hangindent1em\hangafter1\noindent\hbox to1em{#1.\hss}\ignorespaces}
+\def\dsfl#1{\par\vspace{1.2pt}\noindent\textit{#1:} }
+\def\dsfHs{\dsfi1 Measure $S^{ab}(\bq,\omega)$ at several high $T$.
+  \dsfi2 Integrate data to moments $m^{ab}_{n,\bd}$.
+  \dsfi3 Extract by finite differences in $\beta$:
+  \dsfe{m^{ab}_{n,\bd}(\beta)=\sum_{i\geq0}\beta^i\,\sm^{ab}_{n,\bd,i}.}
+  \dsfi4 Use operator algebra to derive $\sm^{ab}_{n,\bd,i}(\bl)$ from proposed Hamiltonian.
+  \dsfi5 Equate and solve for $\bl$.}
+\def\dsfSs{\dsfi1 Measure $S^{ab}(\bq,\omega)$ in strong fields $B\hat n$.
+  \dsfi2 Integrate data to moments $m^{ab}_{n,\bd}$.
+  \dsfi3 Extract by finite differences in $1/B$:
+  \dsfe{B^{-n}m^{ab}_{n,\bd}(B)=\sum_{i\geq0}B^{-i}\,\sm^{ab}_{n,\bd,i}.}
+  \dsfi4 Use perturbation theory to derive $\sm^{ab}_{n,\bd,i}(\bl)$ from proposed Hamiltonian.
+  \dsfi5 Equate and solve for $\bl$.}
+\def\dsfFs{\dsfi1 Measure $S^{ab}(\bq,\omega)$ at a single $T$.
+  \dsfi2 Integrate data to $m^{ab}_{0,\bd}$ and $m^{ab}_{1,\bd}$.
+  \dsfi3 Use measured data to form $\mathsf A$ and $\mathsf b$:
+  \dsfe{\jot.6pt\begin{aligned}\mathsf A^{ab}_{\bd,j}&=\langle[O^b_{\bd},[H^j,O^a_{\boldsymbol0}]]\rangle_\beta = f(m_{0,\vec d}^{ab}),\\
+    \mathsf b^{ab}_{\bd}&=(m^{ab}_{1,\bd}+m^{ba}_{1,-\bd})/2\pi.\end{aligned}}
+  \dsfi4 Solve $\sum_j\mathsf A^{ab}_{\bd,j}\,\lambda^j=\mathsf b^{ab}_{\bd}$.}
+\def\dsfHg{\dsfl{${\leq}2$-body guarantee}full $S^{ab}$ gives all couplings linearly:
+  $\lambda^{ab}_{\bd}=-\sm^{ab}_{0,\bd,1}/2\pi$, $b^a=\mathrm i\varepsilon^{abc}\sm^{bc}_{0,\boldsymbol0,1}/4\pi$.
+  \dsfl{Extensions}diagonal $S^{aa}$, higher-body $H$, spatial disorder}
+\def\dsfSg{\dsfl{${\leq}2$-body guarantee}full $S^{ab}$ at $\hat n=\hat x,\hat y,\hat z$ gives all
+  couplings linearly.
+  \dsfl{Extensions}diagonal $S^{aa}$, higher body $H$, angular tomography.}
+\def\dsfFg{\dsfl{${\leq}2$-body guarantee}full $S^{ab}$ gives all couplings exactly and linearly if $\det\,m^{ab}_{0,\bd} \neq0$ , $\langle\boldsymbol\sigma\rangle_\beta\neq\boldsymbol0$. \par
+\textit{Extensions:} any stationary state}
+
+\begin{document}%
+\dsfh\dsfHs\dsfpa\dsfh\dsfSs\dsfpb\dsfh\dsfFs\dsfpc\dsfh\dsfHg\dsfqa\dsfh\dsfSg\dsfqb\dsfh\dsfFg\dsfqc%
+\pgfmathsetmacro\dsfH{max(\dsfpa+\dsfqa,\dsfpb+\dsfqb,\dsfpc+\dsfqc)+13}%
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=1pt,y=1pt,every node/.style={inner sep=0pt},
+  dsfbox/.style={draw=black!80,line width=.35pt,rounded corners=1.6pt}]
+\foreach \x/\c/\t/\s/\g/\p in {0/dsfHT/High-temperature/\dsfHs/\dsfHg/\dsfpa,
+    157.5/dsfSF/Strong-field/\dsfSs/\dsfSg/\dsfpb,315/dsfFD/Fluctuation--dissipation/\dsfFs/\dsfFg/\dsfpc}{
+  \node[anchor=base,font=\dsfF\bfseries] at (\x+75.5,3.5) {\t};
+  \path[dsfbox,fill=\c!4] (\x,0) rectangle ++(151,-\dsfH);
+  \node[anchor=north] at (\x+75.5,-3.5) {\dsfc{\s}};
+  \draw[black!35,line width=.3pt] (\x+4,-\p-6.5) -- ++(143,0);
+  \node[anchor=north] at (\x+75.5,-\p-9.5) {\dsfc{\g}};}
+\matrix[anchor=north,column sep=10pt,ampersand replacement=\&,nodes={dsfbox,align=center,
+  font=\dsfF,inner xsep=4.5pt,inner ysep=2.6pt}] at (233,-\dsfH-5) {
+  \node{\textit{DSF spectral moments}\\[.6pt]$m^{ab}_{n,\bd}=\mathrm{vol(BZ)}^{-1}\!\int_{\mathrm{BZ}}
+    \mathrm d\bq\,e^{-\mathrm i\bq\cdot\bd}\int\mathrm d\omega\,\omega^nS^{ab}(\bq,\omega)$}; \&
+  \node{\textit{One- and two-body Hamiltonians}\\[.6pt]$H(\bl)=\sum_{\br}b^a\sigma^a_{\br}
+    +\sum_{\br,\,\bd\in\mathcal R}\lambda^{ab}_{\bd}\,\sigma^a_{\br}\sigma^b_{\br+\bd}$};\\};
+\end{tikzpicture}}
+\end{document}
